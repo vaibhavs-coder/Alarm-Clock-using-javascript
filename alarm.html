@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="alar.css" type="text/css" rel="stylesheet"/>
+    
+        <h1>Your Alarm Clock</h1>
+        <div id="time">
+            
+            <input type="text" id="set" placeholder="Enter Alarm time"><button id="btn">Set Alarm</button>
+            <audio id="audio" src="C:\Users\Vaibhav\Downloads\Raataan Lambiyan - Shershaah 320 Kbps.mp3"></audio>
+        </div><script src="alarm.js">
+            let btn=document.getElementById("btn");
+let set=document.getElementById("set");
+btn.addEventListener("click",function(){
+let now=new Date();
+let when=new Date(set.value);
+let time=when-now;
+setTimeout(function(){
+    let audio=document.getElementById("audio");
+    audio.play();
+},time);
+});
+        </script>
+    </body>
+</head>
